@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0d0d0d;
+    padding: 20px; /* Adds space on smaller screens */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2em;
+    background-color: #171717;
+    border-radius: 25px;
+    transition: 0.4s ease-in-out;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form:hover {
+    transform: scale(1.05);
+    border: 1px solid black;
+}
+
+#heading {
+    text-align: center;
+    margin: 1.5em;
+    color: white;
+    font-size: 1.5em;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.8em;
+    background-color: #1f1f1f;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: white;
+}
+
+.input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
+    font-size: 1em;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.form .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.button1,
+.button2,
+.button3 {
+    padding: 0.6em 1.5em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: 0.4s ease-in-out;
+    background-color: #252525;
+    color: white;
+    cursor: pointer;
+}
+
+.button1:hover { background-color: black; }
+.button2:hover { background-color: black; }
+.button3:hover { background-color: red; }
+
+#successMessage {
+    color: green;
+    font-size: 16px;
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .form {
+        padding: 1.5em;
+        max-width: 90%;
+    }
+
+    #heading {
+        font-size: 1.2em;
+        margin: 1em;
+    }
+
+    .input-field {
+        font-size: 0.9em;
+    }
+
+    .button1, .button2, .button3 {
+        font-size: 0.9em;
+        padding: 0.5em 1.2em;
+    }
+}
