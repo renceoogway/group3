@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library of Life - Home</title>
     <link rel="stylesheet" href="design/home.css">
+
+    <script>
+        // authenticator if naka login talaga
+        if (localStorage.getItem("loggedIn") !== "true") {
+            window.location.href = "loginforum.html"; // forcechecker if not true
+        }
+    </script>
 </head>
 <body>
 
@@ -31,11 +38,17 @@
         </section>
         
         <button class="back-button" onclick="goBack()">⬅ Back</button>
+        <button class="logout-button" onclick="logout()">🚪 Logout</button>
     </main>
 
     <script>
         function goBack() {
             window.history.back();
+        }
+
+        function logout() {
+            localStorage.removeItem("loggedIn");
+            window.location.href = "loginforum.html";
         }
     </script>
 
