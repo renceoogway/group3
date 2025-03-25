@@ -7,10 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
+    <script>
+        // authenticator if nakalogin talaga
+        if (localStorage.getItem("loggedIn") !== "true") {
+            window.location.href = "loginforum.html"; // forcekick if not true
+        }
+    </script>
+
     <div class="tree left-tree"></div>
     <div class="tree right-tree"></div>
-    
+
     <div class="nav-center">
         <a href="https://renceoogway.github.io/group3/group3/home.html" class="nav-button">🏠 Home</a>
         <a href="https://renceoogway.github.io/group3/group3/about.html" class="nav-button">ℹ️ About</a>
@@ -19,7 +26,15 @@
     <div class="content">
         <h1>Welcome to the Library of Life</h1>
         <p>Please navigate between these two options:))</p>
+        <button onclick="logout()">Logout</button>
     </div>
+
+    <script>
+        function logout() {
+            localStorage.removeItem("loggedIn");
+            window.location.href = "loginforum.html";
+        }
+    </script>
 
 </body>
 </html>
