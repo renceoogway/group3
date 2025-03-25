@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library of Life</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="design/basedesign.css">
 </head>
 <body>
 
     <script>
-        // authenticator if nakalogin talaga
+        // Authenticator to check if the user is logged in
         if (localStorage.getItem("loggedIn") !== "true") {
-            window.location.href = "loginforum.html"; // forcekick if not true
+            window.location.href = "loginforum.html"; // Redirect if not logged in
         }
     </script>
+
+    <button class="logout-button" onclick="logout()">Logout</button>
 
     <div class="tree left-tree"></div>
     <div class="tree right-tree"></div>
@@ -26,7 +29,6 @@
     <div class="content">
         <h1>Welcome to the Library of Life</h1>
         <p>Please navigate between these two options:))</p>
-        <button onclick="logout()">Logout</button>
     </div>
 
     <script>
@@ -38,4 +40,3 @@
 
 </body>
 </html>
-<link rel="stylesheet" href="design/basedesign.css">
