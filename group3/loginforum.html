@@ -36,7 +36,7 @@
 
     <script>
     document.getElementById("loginForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault();
 
         let valid = true;
 
@@ -46,12 +46,10 @@
         const passwordError = document.getElementById("passwordError");
         const successMessage = document.getElementById("successMessage");
 
-        // Reset previous errors
         emailError.textContent = "";
         passwordError.textContent = "";
         successMessage.style.display = "none";
 
-        // Allowed credentials
         const validEmail = "ictbanatao@gmail.com";
         const validPassword = "group3";
 
@@ -61,11 +59,10 @@
             return;
         }
 
-        // If login is successful
-        successMessage.style.display = "block"; // Show success message
+        successMessage.style.display = "block";
         setTimeout(() => {
-            window.location.href = "https://www.example.com"; // Change to your destination page
-        }, 2000); // Redirect after 2 seconds
+            window.location.href = "https://renceoogway.github.io/group3/group3/Base.html";
+        }, 2000);
     });
     </script>
 
