@@ -11,7 +11,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #0d0d0d;
-    padding: 20px; /* Adds space on smaller screens */
+    padding: 20px;
 }
 
 .form {
