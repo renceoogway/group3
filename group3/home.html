@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="design/home.css">
 
     <script>
-        // authenticator if naka login talaga
+        // authenticator if naka-login talaga
         if (localStorage.getItem("loggedIn") !== "true") {
             window.location.href = "loginforum.html"; // forcechecker if not true
         }
@@ -26,17 +26,22 @@
         <p>Explore various educational modules below.</p>
 
         <section class="modules-grid">
-            <a href="module1.html" class="module-box">una</a>
-            <a href="module2.html" class="module-box">dalawa</a>
-            <a href="module3.html" class="module-box">tatlo</a>
-            <a href="module4.html" class="module-box">apat</a>
-            <a href="module5.html" class="module-box">lima</a>
-            <a href="module6.html" class="module-box">anim</a>
-            <a href="module7.html" class="module-box">pito</a>
-            <a href="module8.html" class="module-box">walo</a>
-            <a href="module9.html" class="module-box">siyam</a>
+            <a href="#module1" class="module-box">una</a>
+            <a href="#module2" class="module-box">dalawa</a>
+            <a href="#module3" class="module-box">tatlo</a>
         </section>
-        
+
+        <section class="module-viewer">
+            <h2 id="module1">Module 1: Introduction to Biology</h2>
+            <iframe src="https://www.scribd.com/embeds/482012009/content" width="100%" height="500px"></iframe>
+
+            <h2 id="module2">Module 2: Cell Structures</h2>
+            <iframe src="https://www.scribd.com/embeds/482011339/content" width="100%" height="500px"></iframe>
+
+            <h2 id="module3">Module 3: Prokaryotic & Eukaryotic Cells</h2>
+            <iframe src="https://www.scribd.com/embeds/572039839/content" width="100%" height="500px"></iframe>
+        </section>
+
         <button class="back-button" onclick="goBack()">⬅ Back</button>
         <button class="logout-button" onclick="logout()">🚪 Logout</button>
     </main>
